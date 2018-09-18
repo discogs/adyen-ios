@@ -23,7 +23,7 @@ public class FormPicker: UIControl {
         configureConstraints()
         
         isAccessibilityElement = true
-        accessibilityTraits = UIAccessibilityTraitButton
+        accessibilityTraits = UIAccessibilityTraits.button
     }
     
     public required init(coder: NSCoder) {
@@ -75,7 +75,7 @@ public class FormPicker: UIControl {
     
     private lazy var textField: FormPickerTextField = {
         let textField = FormPickerTextField()
-        textField.defaultTextAttributes = Appearance.shared.textAttributes.reduce(into: [:], { $0[$1.key.rawValue] = $1.value })
+        textField.defaultTextAttributes = Appearance.shared.textAttributes
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.text = values.first
         textField.delegate = self

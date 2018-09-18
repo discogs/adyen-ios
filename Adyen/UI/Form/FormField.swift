@@ -48,7 +48,7 @@ public class FormField: UIControl {
     
     public lazy var textField: UITextField = {
         let textField = self.textFieldClass.init()
-        textField.defaultTextAttributes = Appearance.shared.textAttributes.reduce(into: [:], { $0[$1.key.rawValue] = $1.value })
+        textField.defaultTextAttributes = Appearance.shared.textAttributes
         textField.clearButtonMode = .whileEditing
         textField.translatesAutoresizingMaskIntoConstraints = false
         

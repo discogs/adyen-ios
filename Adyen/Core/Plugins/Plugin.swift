@@ -19,10 +19,10 @@ open class Plugin: NSObject {
         self.appearance = appearance
     }
     
-    open let paymentMethod: PaymentMethod
-    open let paymentSession: PaymentSession
-    open let appearance: Appearance
-    open var additionalPaymentDetails: AdditionalPaymentDetails?
+    public let paymentMethod: PaymentMethod
+    public let paymentSession: PaymentSession
+    public let appearance: Appearance
+    public var additionalPaymentDetails: AdditionalPaymentDetails?
     
     open var showsDisclosureIndicator: Bool {
         return false
